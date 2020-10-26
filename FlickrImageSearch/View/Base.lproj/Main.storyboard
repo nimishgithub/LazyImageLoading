@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MOn-h4-h96">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master-->
+        <scene sceneID="E9P-XV-aaJ">
+            <objects>
+                <navigationController title="Master" id="MOn-h4-h96" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" largeTitles="YES" id="Gs6-iT-BoG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.92138129469999996" green="0.92155820129999999" blue="0.92135167120000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xVJ-X3-O2N" kind="relationship" relationship="rootViewController" id="xgq-d9-W76"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmV-kc-dhT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="-630"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="93h-Af-o59">
+            <objects>
+                <viewController id="xVJ-X3-O2N" customClass="SearchViewController" customModule="FlickrImageSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZ4-2d-Hww"/>
+                        <viewControllerLayoutGuide type="bottom" id="sCx-Ee-75C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mK3-HK-8cO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GMH-FD-rbd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kgD-Xq-pfQ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GMH-FD-rbd" secondAttribute="bottom" id="FIe-CD-oSu"/>
+                            <constraint firstItem="GMH-FD-rbd" firstAttribute="leading" secondItem="A2Y-Ti-65D" secondAttribute="leading" id="P9q-57-FCO"/>
+                            <constraint firstItem="A2Y-Ti-65D" firstAttribute="trailing" secondItem="GMH-FD-rbd" secondAttribute="trailing" id="TOr-DM-pAr"/>
+                            <constraint firstItem="GMH-FD-rbd" firstAttribute="top" secondItem="A2Y-Ti-65D" secondAttribute="top" id="cmd-wa-3wY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A2Y-Ti-65D"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Zcs-rH-1Bd">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="tpi-fa-ux3">
+                            <rect key="frame" x="132" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flickr Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xE-fy-agm">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                    <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="7xE-fy-agm" firstAttribute="leading" secondItem="tpi-fa-ux3" secondAttribute="leading" id="F0f-o5-xZE"/>
+                                <constraint firstAttribute="bottom" secondItem="7xE-fy-agm" secondAttribute="bottom" id="ThH-1o-qdD"/>
+                                <constraint firstAttribute="trailing" secondItem="7xE-fy-agm" secondAttribute="trailing" id="fWQ-PU-Zrm"/>
+                                <constraint firstItem="7xE-fy-agm" firstAttribute="top" secondItem="tpi-fa-ux3" secondAttribute="top" id="gxf-N9-QVP"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="GMH-FD-rbd" id="vku-t2-6hF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69c-oc-KZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="-630"/>
+        </scene>
+    </scenes>
+</document>
